@@ -6,14 +6,12 @@
 
 import React, { Component } from 'react';
 import { AppRegistry, Text, View } from 'react-native';
-import NewsList from './src/components/News/NewsList/';
-import Nav from './src/components/Nav/Bar/';
+import Nav from './src/components/Nav/';
 
 export default class crcrcryNews extends Component {
   render() {
     return (
       <View style={{flex: 1, flexDirection: 'column'}}>
-        <View style={{flex: 8}}><NewsList /></View>
         <View style={{flex: 1}}><Nav /></View>
       </View>
     )

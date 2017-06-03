@@ -30,3 +30,6 @@
 	- 没太搞懂 babel-plugin-import 有啥用，也没搞懂这个 .babelrc 有啥用。没有好像也没啥大碍？
 	- 看了下官方给的 demo，的确是这么写了，但是官方 demo 是五个月前的版本，也许现在改进了，已经不需要 babel-plugin-import 了，RN 支持原生 import 了。
 	- 但最好还是用着吧。
+
+## Antd-Mobile 排坑
+- tabs 组件的 tabpane 下面不能用 view，渲染不出来，可以用 listview
