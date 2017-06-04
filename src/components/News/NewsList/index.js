@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
-import {View, Text, ListView} from 'react-native'
+import React, { Component } from 'react';
+import { View, Text, ListView, StyleSheet, Image } from 'react-native'
 import { Tabs, WhiteSpace } from 'antd-mobile';
+import NewsItem from './ListItem';
 
 const TabPane = Tabs.TabPane;
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
@@ -10,7 +11,30 @@ class NewsList extends Component{
     activeTab: 'login',
     newsType: ["推荐", "头条", "社会", "国内", "国际", "娱乐", "体育"],
     dataSource: ds.cloneWithRows([
-      'John', 'Joel', 'James', 'Jimmy', 'Jackson', 'Jillian', 'Julie', 'Devin'
+      {
+        title: '各类PC集合：台式笔记本一体机都有！',
+        author: '笔记本资讯',
+        time: '2017-05-06 23:46',
+        imageUrl: 'https://05.imgmini.eastday.com/mobile/20170506/20170506234646_2ec406cd1bc4d07926d0042951e7fdec_4_mwpm_03200403.jpeg'
+      },
+      {
+        title: '不再担心插不准，让你闭着眼睛都可以插对接口！！',
+        author: '毒草数码',
+        time: '2017-05-06 23:26',
+        imageUrl: 'https://07.imgmini.eastday.com/mobile/20170506/20170506234646_debd230896d9d9356e911e2939e878f3_4_mwpm_03200403.jpeg'
+      },
+      {
+        title: '各类PC集合：台式笔记本一体机都有！',
+        author: '笔记本资讯',
+        time: '2017-05-06 23:46',
+        imageUrl: 'https://05.imgmini.eastday.com/mobile/20170506/20170506234646_2ec406cd1bc4d07926d0042951e7fdec_4_mwpm_03200403.jpeg'
+      },
+      {
+        title: '不再担心插不准，让你闭着眼睛都可以插对接口！！',
+        author: '毒草数码',
+        time: '2017-05-06 23:26',
+        imageUrl: 'https://07.imgmini.eastday.com/mobile/20170506/20170506234646_debd230896d9d9356e911e2939e878f3_4_mwpm_03200403.jpeg'
+      },
     ])
   };
 
@@ -25,21 +49,12 @@ class NewsList extends Component{
   }
 
   render(){
-    const newsItem = (rowData) => (
-      <View style={{flex: 1, height: 120, flexDirection: 'row'}}>
-        <View style={{flex: 3, backgroundColor: 'powderblue'}} />
-        <View style={{flex: 7, backgroundColor: 'skyblue'}} >
-          <Text>rowData</Text>
-        </View>
-      </View>
-    )
-
     const tabArr = this.state.newsType.map((item, index) => {
       return(
         <TabPane tab={item} key={item}>
           <ListView
             dataSource={this.state.dataSource}
-            renderRow={newsItem}
+            renderRow={(rowData)=><NewsItem data={rowData} />}
           />
         </TabPane>
       )
