@@ -63,9 +63,9 @@ class NewsList extends Component{
     return(
       <Tabs
         activeKey={this.state.activeTab}
-        barStyle={{marginTop: 17}}
         onChange={this.handleChange}
         onTabClick={this.handleTabClick}
+        animated={false}
       >
         {tabArr}
       </Tabs>

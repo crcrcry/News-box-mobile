@@ -14,7 +14,7 @@ const selectedUsers = require('../../static/selecteduser.png');
 
 class Nav extends React.Component {
   state = {
-    selectedBar: 'news'
+    selectedBar: 'users'
   }
 
   changeBar = barValue => {
