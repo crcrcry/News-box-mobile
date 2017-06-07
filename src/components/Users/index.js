@@ -30,6 +30,7 @@ class Users extends React.Component {
         onChange={this.handleChange}
         onTabClick={this.handleTabClick}
         animated={false}
+        barStyle={{marginTop: 17}}
       >
         <TabPane tab="注册" key="register">
           <Register />

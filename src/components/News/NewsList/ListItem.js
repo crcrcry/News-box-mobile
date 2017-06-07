@@ -1,19 +1,38 @@
 import React, { Component } from 'react';
-import { View, ListView, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableHighlight } from 'react-native';
+import NewsDetail from '../NewsDetail/';
 
 class NewsItem extends Component {
+
+  handlePress = () => {
+    this.props.navigator.push({
+      component: NewsDetail,
+      title: this.props.data.title,
+      passProps: {
+        newsInfo: this.props.data
+      }
+    })
+  }
 
   render() {
     return (
       <View style={{flex: 1, height: 300, flexDirection: 'column'}}>
         <View style={styles.newsTitle}>
-          <Text style={{fontSize: 18}}>{this.props.data.title}</Text>
+          <TouchableHighlight
+            onPress={this.handlePress}
+          >
+            <Text style={{fontSize: 18}}>{this.props.data.title}</Text>
+          </TouchableHighlight>
         </View>
         <View style={styles.newsImage} >
-          <Image
-            source={{uri: this.props.data.imageUrl}}
-            style={{width: 330, height: 200}}
-          />
+          <TouchableHighlight
+            onPress={this.handlePress}
+          >
+            <Image
+              source={{uri: this.props.data.imageUrl}}
+              style={{width: 330, height: 200}}
+            />
+          </TouchableHighlight>
         </View>
         <View style={styles.newsBottom} >
           <View style={styles.newsAuthor}>

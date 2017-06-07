@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { TabBar, Icon } from 'antd-mobile';
 import Users from '../Users/';
-import NewsList from '../News/NewsList/'
+import News from '../News/'
 
 /* eslint global-require: 0 */
 
@@ -14,7 +14,7 @@ const selectedUsers = require('../../static/selecteduser.png');
 
 class Nav extends React.Component {
   state = {
-    selectedBar: 'users'
+    selectedBar: 'news'
   }
 
   changeBar = barValue => {
@@ -48,7 +48,7 @@ class Nav extends React.Component {
           selected={this.state.selectedBar === 'news'}
           onPress={this.changeBar.bind(null, 'news')}
         >
-          <NewsList />
+          <News />
         </TabBar.Item>
       </TabBar>
     )
