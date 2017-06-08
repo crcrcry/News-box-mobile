@@ -1,5 +1,5 @@
 # News-box-mobile
--  ZJU BS架构课程大作业，各大新闻网站的新闻整合平台
+-  各大新闻网站的新闻整合平台
 -  <a href="https://github.com/crcrcry/News-box">News-box</a> IOS移动端
 
 ## 技术栈
