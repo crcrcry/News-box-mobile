@@ -36,9 +36,9 @@
 - fetch API 发起 ajax
 	- 同网络上的图片引入，需要用 https 来满足 IOS App 传输安全的要求。
 - 对于触碰事件
-	- \<View>、\<Text> 等不含有 onPress 属性的标签，可通过被 <TouchableHighligh> 等标签包裹来实现触摸事件。
+	- \<View>、\<Text> 等不含有 onPress 属性的标签，可通过被 \<TouchableHighligh> 等标签包裹来实现触摸事件。
 - 关于动画性能
 	- 切屏动画卡顿，**尚不知道怎么解决。**
 
 ## Antd-Mobile 排坑
-- tabs 组件的 tabpane 下面不能用 view，渲染不出来，可以用 listview
+- Tabs 组件的 Tabpane 下面不能用 View，渲染不出来，可以用 ListView
