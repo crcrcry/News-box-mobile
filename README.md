@@ -11,6 +11,9 @@
     - 框架：Express
     - 数据库：Mysql
 
+## 项目进程
+- mobile 端 View 完成，尚未和后端服务器接入。
+
 
 ## React-Native 排坑
 - 文件名用 .js，.jsx 会打包失败。
